@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Skip Intro",
+  "version": "1.0.0",
+  "description": "Automatically clicks visible Skip Intro and Skip Recap buttons on supported streaming websites.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.netflix.com/*",
+    "*://*.disneyplus.com/*",
+    "*://*.hulu.com/*",
+    "*://*.max.com/*",
+    "*://*.primevideo.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Auto Skip Intro"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.netflix.com/*",
+        "*://*.disneyplus.com/*",
+        "*://*.hulu.com/*",
+        "*://*.max.com/*",
+        "*://*.primevideo.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
