@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Auto Skip Intro</title>
+  <style>
+    body{font-family:Arial,sans-serif;width:315px;padding:14px;margin:0;background:#111;color:#fff}
+    h1{font-size:18px;margin:0 0 8px}
+    p{font-size:13px;line-height:1.35;color:#ddd}
+    label{display:flex;justify-content:space-between;gap:12px;margin:10px 0;font-size:14px}
+    button{width:100%;padding:10px;border:0;border-radius:10px;cursor:pointer;margin-top:8px}
+    .primary{background:#fff;color:#111;font-weight:bold}
+    .secondary{background:#333;color:#fff}
+    .small{font-size:12px;color:#aaa;white-space:pre-wrap}
+  </style>
+</head>
+<body>
+  <h1>Auto Skip Intro</h1>
+  <p>v1.0 is the lightweight Netflix-safe build.</p>
+
+  <label>Enabled <input id="enabled" type="checkbox"></label>
+  <label>Skip Intro <input id="skipIntro" type="checkbox"></label>
+  <label>Skip Recap <input id="skipRecap" type="checkbox"></label>
+  <label>Skip Credits <input id="skipCredits" type="checkbox"></label>
+  <label>Debug Overlay <input id="debugMode" type="checkbox"></label>
+
+  <button id="testScan" class="primary">Test Scan Current Page</button>
+  <button id="forceScan" class="primary">Force Click Skip Intro</button>
+  <button id="openOptions" class="secondary">Advanced Settings</button>
+  <p id="status" class="small"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
