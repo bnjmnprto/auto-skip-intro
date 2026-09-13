@@ -1,0 +1,1 @@
+Extension icon assets for Auto Skip Intro.
