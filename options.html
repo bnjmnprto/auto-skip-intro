@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Auto Skip Intro Settings</title>
+  <style>
+    body{font-family:Arial,sans-serif;max-width:780px;margin:36px auto;padding:0 20px;line-height:1.5}
+    .card{border:1px solid #ddd;border-radius:14px;padding:18px;margin:14px 0}
+    label{display:flex;justify-content:space-between;margin:12px 0}
+    input[type=number]{width:100px}
+    .muted{color:#666}
+    code{background:#f4f4f4;padding:2px 5px;border-radius:5px}
+  </style>
+</head>
+<body>
+  <h1>Auto Skip Intro Settings</h1>
+  <p class="muted">v1.0 avoids aggressive page scanning so Netflix can load normally.</p>
+
+  <div class="card">
+    <h2>Behavior</h2>
+    <label>Enabled <input id="enabled" type="checkbox"></label>
+    <label>Skip Intro <input id="skipIntro" type="checkbox"></label>
+    <label>Skip Recap <input id="skipRecap" type="checkbox"></label>
+    <label>Skip Credits <input id="skipCredits" type="checkbox"></label>
+    <label>Debug Overlay <input id="debugMode" type="checkbox"></label>
+    <label>Cooldown between clicks, ms <input id="cooldownMs" type="number" min="500" step="100"></label>
+    <label>Scan interval, ms <input id="scanIntervalMs" type="number" min="800" step="100"></label>
+  </div>
+
+  <div class="card">
+    <h2>Recommended Netflix settings</h2>
+    <ul>
+      <li>Skip Intro: on</li>
+      <li>Skip Recap: on</li>
+      <li>Skip Credits: off</li>
+      <li>Debug Overlay: off unless testing</li>
+    </ul>
+  </div>
+
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>
