@@ -1,0 +1,1 @@
+Binary icons will be committed under the icons directory.
